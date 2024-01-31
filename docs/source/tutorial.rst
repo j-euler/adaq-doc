@@ -1,4 +1,6 @@
 Tutorial
 ===
 
+.. _test:
+
 todo
