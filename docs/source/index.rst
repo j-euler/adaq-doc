@@ -3,17 +3,10 @@ ADAQ: Automatic Defect Analysis and Qualification
 
 .. toctree::
    :hidden:
-   :maxdepth: 1
-   :caption: home
-
-   home <self>
-
-.. toctree::
-   :hidden:
    :maxdepth: 2
    :caption: Getting Started
 
-   Installation
+   installation
    overview
    tutorial
 

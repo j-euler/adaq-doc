@@ -37,7 +37,7 @@ templates_path = ['_templates']
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
-html_favicon = 'favicon.png'
+html_favicon = 'favicon.ico'
 
 html_logo = 'ADAQ_logo_header.png'
 html_theme_options = {
