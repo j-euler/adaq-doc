@@ -6,7 +6,7 @@ ADAQ: Automatic Defect Analysis and Qualification
    :maxdepth: 2
    :caption: Getting Started
 
-   Installation <self>
+   Installation
    overview
    tutorial
 
