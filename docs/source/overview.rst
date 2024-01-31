@@ -1,6 +1,7 @@
 Overview
 ===
 
-.. _test:
+Overview
+------------
 
 todo

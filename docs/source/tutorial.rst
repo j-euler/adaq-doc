@@ -1,6 +1,7 @@
 Tutorial
 ===
 
-.. _test:
+Tutorial
+------------
 
 todo

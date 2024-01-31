@@ -2,6 +2,7 @@ ADAQ: Automatic Defect Analysis and Qualification
 ===================================
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
    :caption: Getting Started
 
