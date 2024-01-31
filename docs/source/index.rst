@@ -1,22 +1,35 @@
-Welcome to Lumache's documentation!
+ADAQ: Automatic Defect Analysis and Qualification
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   :caption: Getting Started
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+   Installation <self>
+   overview
+   tutorial
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Workflows
+
+   General
+   0_chemical_potential
+   1_unitcell
+   2_node_scaling
+   3_host_supercell
+   4_screen
+
+.. figure:: ADAQ_logo_header.png
+  :scale: 30%
+  :align: left
+  :target: index.html
+
+**ADAQ** is an high-throughput framework to calculate point defects.
 
 .. note::
 
    This project is under active development.
 
-Contents
---------
-
-.. toctree::
-
-   usage
-   api
