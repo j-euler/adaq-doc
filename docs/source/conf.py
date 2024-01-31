@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.abspath('.'))
 # -- Project information
 
 project = 'ADAQ-doc'
-copyright = '2024, Davidsson'
+copyright = '2024, Joel Davidsson'
 author = 'Joel Davidsson'
 
 release = '0.1'
