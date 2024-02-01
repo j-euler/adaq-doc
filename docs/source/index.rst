@@ -30,18 +30,16 @@ ADAQ: Automatic Defect Analysis and Qualification
 **ADAQ** is a collection of automatic workflows used for high-throughput calculations of point defects in semiconductors.
 These workflows are implemented using the High-Throughput Toolkit (|httk|_).
 
-|httk|_
-
 .. _httk: https://github.com/httk/httk
 
-.. |_httk| replace:: *httk*
+.. |httk| replace:: *httk*
 
 Required software
 ------------
 
 * Python 2.7
-* |tess|_ (https://github.com/wackywendell/tess)
-* |PyVaspwfc|_ (embedded)
+* `tess`_
+* `PyVaspwfc`_ (embedded)
 * |httk|_
 * isotropy
 * jmol (optional)
