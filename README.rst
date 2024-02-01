@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
+Documention for ADAQ
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Documention for ADAQ - Automatic Defect Analysis and Qualification
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+https://adaq-doc.readthedocs.io/en/latest/index.html
