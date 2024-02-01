@@ -1,8 +1,6 @@
 Installation
 =====
 
-.. _installation:
-
 Installation
 ------------
 
@@ -11,44 +9,46 @@ For example, a interfacable storage archive.
 
 .. _httk:
 
-*httk*
+The High-Throughput Toolkit (*httk*)
 ------
 
-More info about *httk*, see `https://docs.httk.org/en/latest/`.
+More info about *httk*, see https://docs.httk.org/en/latest/.
 
 **Install httk**
 
-You need to install The High-Throughput Toolkit (httk).
 Install the `devel`_ branch by following the instructions here: 
 
 .. _devel: https://github.com/httk/httk/tree/devel
 
 .. code-block:: console
 
-   $ git clone https://github.com/httk/httk.git
+   $ git clone -b devel https://github.com/httk/httk.git
 
-Change to *devel* branch
+Ensure to use the *devel* branch.
 
-**configure httk with isotrpy and jmol**
+**Configure httk**
 
-httk uses other softwares to find symmetry and show crystal structures:
-isotropy (required for ADAQ)
-jmol (optional but recommended)
+*httk* uses other softwares to find symmetry and show crystal structures:
+* isotropy (required for ADAQ)
+* jmol (optional but recommended)
 
-Place the isotropy files where you want and edit isotropy/findsym find the absoulute path:
+Place the isotropy files where you want and edit *isotropy/findsym* to find the absoulute path:
+
 .. code-block:: console
 
    export ISODATA=/path/to/isotropy/iso-9.3.1/
    exec /path/to/isotropy/iso-9.3.1/findsym "$@"
 
-Place jmol files where you want
+Place jmol files where you want.
 
 In the httk folder, run:
+
 .. code-block:: console
 
    cp httk.cfg.example src/httk/httk.cfg
    
-Edit the path in httk.cfg to link to isotropy and jmol (absoulute path):
+Edit the paths in *src/httk/httk.cfg* to link to isotropy and jmol (absoulute path):
+
 .. code-block:: console
 
    isotropy=/path/to/isotropy
@@ -62,37 +62,71 @@ ADAQ
 **Install ADAQ**
 
 Clone the directory from github:
+
 .. code-block:: console
 
    $ git clone <link to ADAQ when public>
 
 The current version of ADAQ runs with python 2.7 and requires the python package tess.
 A suggestion is to make a virtualenv or conda with python 2.7 and tess:
+
 .. code-block:: console
 
-   conda create -n adaq python=2.7 tess
+   $ conda create -n adaq python=2.7 tess
 
 activate this enviroment with:
+
 .. code-block:: console
 
-   conda activate adaq
+   $ conda activate adaq
 
 **Test installation**
 
+Ensure to source *httk* and ADAQ:
+
+.. code-block:: console
+
+   $ source /path/to/httk/init.shell
+   $ source /path/to/ADAQ/init.shell
+   $ conda activate adaq
+
 In the ADAQ folder, run:
+
 .. code-block:: console
 
    (adaq) $ python test_installation.py
 
 If you want to test with jmol, run:
+
 .. code-block:: console
 
    (adaq) $ python test_installation.py jmol
 
+   
+.. _supercomputer:
+
+Supercomputer
+----
+
+ADAQ and *httk* interfaces with a supercomputer to do the calculations.
+At the supercomputer, you require `VASP`_ and a python installation with numpy and scipy.
+
+.. _VASP: https://www.vasp.at/
 
 .. _LiU:
 
-Linköping Univserity specifics
+Linköping University specifics
 ------------------------------
 
-recommended to use dedur01
+Recommended to install httk and ADAQ at dedur01.
+At dedur01, needed files are located here:
+* istropy (/dedur01/data/shared/httk_libs/isotropy)
+* jmol (/dedur01/data/shared/httk_libs/jmol/jmol-14.4.0_2015.10.22b/jmol.sh)
+
+When using tetralith, install a conda enviroment:
+
+.. code-block:: console
+
+   $ conda create -n adaq2 python=2.7 numpy scipy
+
+
