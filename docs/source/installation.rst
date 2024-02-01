@@ -1,8 +1,6 @@
+============
 Installation
-=====
-
-Installation
-------------
+============
 
 ADAQ requires a local installation, ideally in a location where the data does not have to be moved later.
 For example, a interfacable storage archive.
@@ -10,7 +8,7 @@ For example, a interfacable storage archive.
 .. _httk:
 
 The High-Throughput Toolkit (*httk*)
-------
+=============
 
 More info about *httk*, see https://docs.httk.org/en/latest/.
 
@@ -57,7 +55,7 @@ Edit the paths in *src/httk/httk.cfg* to link to isotropy and jmol (absoulute pa
 .. _ADAQ:
 
 ADAQ
-----
+=============
    
 **Install ADAQ**
 
@@ -82,7 +80,7 @@ activate this enviroment with:
 
 **Test installation**
 
-Ensure to source *httk* and ADAQ:
+Ensure to source *httk* and ADAQ as well as activate the conda enviroment:
 
 .. code-block:: console
 
@@ -106,7 +104,7 @@ If you want to test with jmol, run:
 .. _supercomputer:
 
 Supercomputer
-----
+=============
 
 ADAQ and *httk* interfaces with a supercomputer to do the calculations.
 At the supercomputer, you require `VASP`_ and a python installation with numpy and scipy.
@@ -120,13 +118,12 @@ Linköping University specifics
 
 Recommended to install httk and ADAQ at dedur01.
 At dedur01, needed files are located here:
+
 * istropy (/dedur01/data/shared/httk_libs/isotropy)
 * jmol (/dedur01/data/shared/httk_libs/jmol/jmol-14.4.0_2015.10.22b/jmol.sh)
 
-When using tetralith, install a conda enviroment:
+When using tetralith or sigma, install a conda enviroment:
 
 .. code-block:: console
 
    $ conda create -n adaq2 python=2.7 numpy scipy
-
-
