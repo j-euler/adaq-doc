@@ -12,18 +12,15 @@ ADAQ: Automatic Defect Analysis and Qualification
 
 .. toctree::
    :hidden:
-   :maxdepth: 1
-   :caption: Workflows
+   :maxdepth: 2
+   :caption: Details
 
-   General
-   0_chemical_potential
-   1_unitcell
-   2_node_scaling
-   3_host_supercell
-   4_screen
+   commands
+   workflow
+   database
 
 .. figure:: ADAQ_logo_header.png
-  :scale: 30%
+  :scale: 25%
   :align: left
   :target: index.html
 
@@ -37,12 +34,15 @@ These workflows are implemented using the High-Throughput Toolkit (|httk|_).
 Required software
 ------------
 
+* `VASP`_
 * Python 2.7
 * `tess`_
 * `PyVaspwfc`_ (embedded)
 * |httk|_
 * isotropy
 * jmol (optional)
+
+.. _VASP: https://www.vasp.at/
 
 .. _tess: https://github.com/wackywendell/tess
 

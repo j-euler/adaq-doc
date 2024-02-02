@@ -13,7 +13,7 @@ ADAQ automates the following steps in the theoretical process of calculating poi
    For more information: <https://httk.org/adaq/>
 
 This overview introduces the ADAQ commands and folder structure..
-More details are found in :ref:`tutorial`.
+More details are found in :doc:`tutorial`.
 
 Ensure to source *httk* and ADAQ as well as activate the conda enviroment:
 
@@ -32,7 +32,7 @@ The ADAQ commands are available after sourcing ADAQ/init.shell.
 They all start with ``adaq-``.
 
 ..
-   More details are found in :ref:`tutorial`.
+   More details are found in :doc:`tutorial`.
 
 Below shows how a ADAQ project is created.
 
@@ -54,7 +54,7 @@ You will then be promoted to provide a ``POSCAR`` for the unit cell.
 It does not need to be relaxed, there are ADAQ workflows to do that.
 
 ..
-   More details about the workflows are here :ref:`tutorial`.
+   More details about the workflows are here :doc:`tutorial`.
 
 One also need to provide additional parameters that are not calculated.
 These are:
@@ -98,7 +98,7 @@ To install httk at the remote computer, run the following command:
 
    httk-computer-install <computer name>
 
-Go to :ref:`tutorial` to calculate the silicon vacancy in 4H-SiC using ADAQ.
+Go to :doc:`tutorial` to calculate the single defects in 4H-SiC using ADAQ.
 
 Linköping University specifics
 ------------------------------
@@ -127,3 +127,13 @@ In ht.project/computers/name/start-taskmgr, add:
    conda activate adaq2
 
 after source "\$HTTK_DIR/setup.shell" 
+
+.. _database:
+
+ADAQ database
+=============
+
+Once a project is finished, the data can be added to the ADAQ database.
+Go to :doc:`database` for more infomation.
+
+
