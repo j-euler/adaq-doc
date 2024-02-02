@@ -81,6 +81,7 @@ It will also contain:
 * ht.project that has the settings for the defect generation.
 
 You will also need to set up a supercomputer with the httk command:
+
 .. code-block:: console
 
    $ httk-computer-setup
@@ -92,6 +93,7 @@ There is also a ``config`` file that you can edit in case you need to change som
 Depending on your supercomputer cluster, you may need to edit the ht.project/computers/<computer name>/start-taskmgr to load module or python environments during the runs.
 
 To install httk at the remote computer, run the following command:
+
 .. code-block:: console
 
    $ httk-computer-install <computer name>
@@ -117,15 +119,16 @@ Here are the following settings to set up a computer for tetralith:
 
 When using dedur and tetralith, also change these:
 
-In ht.project/computers/name/pull, change: -az to -rltz
+In ``ht.project/computers/name/pull``, change: ``-az`` to ``-rltz`
 
-In ht.project/computers/name/start-taskmgr, add:
+In ``ht.project/computers/name/start-taskmgr``, add:
+
 .. code-block:: console
 
-   $ module load Anaconda/2023.09-0-hpc1
-   $ conda activate adaq2
+   module load Anaconda/2023.09-0-hpc1
+   conda activate adaq2
 
-after source "\$HTTK_DIR/setup.shell" 
+after ``source "\$HTTK_DIR/setup.shell"``
 
 .. _database:
 
