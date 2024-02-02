@@ -3,7 +3,7 @@ Installation
 ============
 
 ADAQ requires a local installation, ideally in a location where the data does not have to be moved later.
-For example, a interfacable storage archive.
+For example, an interfaceable storage archive.
 
 .. _httk:
 
@@ -26,11 +26,12 @@ Ensure to use the *devel* branch.
 
 **Configure httk**
 
-*httk* uses other softwares to find symmetry and show crystal structures:
+*httk* uses other software to find symmetry and show crystal structures:
+
 * isotropy (required for ADAQ)
 * jmol (optional but recommended)
 
-Place the isotropy files where you want and edit *isotropy/findsym* to find the absoulute path:
+Place the isotropy files where you want and edit *isotropy/findsym* to find the absolute path:
 
 .. code-block:: console
 
@@ -72,7 +73,7 @@ A suggestion is to make a virtualenv or conda with python 2.7 and tess:
 
    $ conda create -n adaq python=2.7 tess
 
-activate this enviroment with:
+activate this environment with:
 
 .. code-block:: console
 
@@ -80,7 +81,7 @@ activate this enviroment with:
 
 **Test installation**
 
-Ensure to source *httk* and ADAQ as well as activate the conda enviroment:
+Ensure to source *httk* and ADAQ as well as activate the conda environment:
 
 .. code-block:: console
 
@@ -117,12 +118,12 @@ Linköping University specifics
 ------------------------------
 
 Recommended to install httk and ADAQ at dedur01.
-At dedur01, needed files are located here:
+At dedur01, the required files are located here:
 
 * istropy (/dedur01/data/shared/httk_libs/isotropy)
 * jmol (/dedur01/data/shared/httk_libs/jmol/jmol-14.4.0_2015.10.22b/jmol.sh)
 
-When using tetralith or sigma, install a conda enviroment:
+When using tetralith or sigma, install a conda environment:
 
 .. code-block:: console
 
