@@ -123,6 +123,17 @@ At dedur01, the required files are located here:
 * istropy (/dedur01/data/shared/httk_libs/isotropy)
 * jmol (/dedur01/data/shared/httk_libs/jmol/jmol-14.4.0_2015.10.22b/jmol.sh)
 
+It is also recommended to add configure ssh connection sharing at dedur.
+Add the following code to ``.ssh/config``:
+
+.. code-block:: console
+
+   Host tetralith.nsc.liu.se
+   User x_abcde
+   ControlMaster auto
+   ControlPath ~/.ssh/cm-%r@%h:%p
+   ControlPersist 8h
+
 When using tetralith or sigma, install a conda environment:
 
 .. code-block:: console

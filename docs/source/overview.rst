@@ -119,7 +119,7 @@ Here are the following settings to set up a computer for tetralith:
 
 When using dedur and tetralith, also change these:
 
-In ``ht.project/computers/name/pull``, change: ``-az`` to ``-rltz`
+In ``ht.project/computers/name/pull``, change: ``-az`` to ``-rltz``
 
 In ``ht.project/computers/name/start-taskmgr``, add:
 
