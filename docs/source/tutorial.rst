@@ -316,8 +316,9 @@ This will produce the following output:
 
 And plot the results:
 
-.. image:: node_scaling.pdf
-   :width: 600
+.. raw:: html
+   <embed src="node_scaling.pdf" width="500" height="375" />
+
 
 In the upper plot, one sees the number of corehours per number of ``Cores [Nodes]``.
 Here, the data matches the ideal scaling up to 5 nodes.
