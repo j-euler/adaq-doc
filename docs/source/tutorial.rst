@@ -303,7 +303,7 @@ To plot the scaling, run the following command:
 
    $ adaq-workflow-node_scaling result ht_tetralith
 
-This will produce the following output:
+This command will write the following output:
 
 .. code-block:: console
 
@@ -314,11 +314,10 @@ This will produce the following output:
    Rounded NBANDS:  [1728, 1728, 1728, 1792, 1760, 1728, 1792, 1792, 1728, 1600]
    Close figure after deciding the number of nodes.
 
-And plot the results:
+And produce the this plot:
 
-.. raw:: html
-   <embed src="node_scaling.pdf" width="500" height="375" />
-
+.. image:: node_scaling.png
+   :width: 600
 
 In the upper plot, one sees the number of corehours per number of ``Cores [Nodes]``.
 Here, the data matches the ideal scaling up to 5 nodes.
