@@ -22,7 +22,7 @@ Navigate to where you would like to store the ADAQ project.
 ADAQ project
 =============
 
-First, create a ADAQ project with the following command:
+First, create an ADAQ project with the following command:
 
 .. code-block:: console
 
@@ -31,7 +31,7 @@ First, create a ADAQ project with the following command:
 It will prompt you to enter a POSCAR file.
 Write the path to the 4H-SiC in ``path/to/ADAQ/test/4H-SiC.vasp``
 
-You will also prompted to provide the dielectric constant, which is 9.6, and refractive_index, which is 2.6473, for 4H-SiC.
+You will also prompted to provide the dielectric constant (9.6) and refractive_index (2.6473) for 4H-SiC.
 
 This finished the adaq project setup.
 
@@ -39,21 +39,21 @@ This finished the adaq project setup.
 
    There will also be some metadata to add, such as project, and collaborators etc.
 
-The command will also set up a httk project.
+The command will also set up a *httk* project.
 You will be prompted to set up a public key that identifies you as the owner, which is recommended.
 
-Enter the ``4H-SiC`` folder and you will see the following folder structure:
+Enter the ``4H-SiC`` folder, and you will see the following folder structure:
 
 .. code-block:: console
 
-   4H-SiC.data  4H-SiC.vasp  defects  full  host  ht.project  parameters.py  readme.txt  screen  tuning  unitcell
+   4H-SiC.data  4H-SiC.vasp  defects  full  host  ht.project  parameters.py  screen  tuning  unitcell
 
 .. _supercomputer:
 
 Supercomputer
 =========
 
-We also need to install a supercomputer for ADAQ and *httk* to interface with.
+We must also install a supercomputer for ADAQ and *httk* to interface with.
 First, we set up the computer in the ADAQ project:
 
 .. code-block:: console
@@ -61,14 +61,14 @@ First, we set up the computer in the ADAQ project:
    $ httk-computer-setup
 
 For this tutorial, we have named the computer ``ht_tetralith``.
-If you make an mistake, you restart or can edit the ``config`` file in the ``ht.project/computer/ht_tetralith/`` folder.
-Once it looks ok, you install *httk* at the supercomputer with:
+If you make a mistake, you restart the config or can edit the ``config`` file in the ``ht.project/computer/ht_tetralith/`` folder.
+Once it looks ok, you install *httk* on the supercomputer with the following command:
 
 .. code-block:: console
 
    $ httk-computer-install <computer name>
 
-Now, everything is setup to continue with the rest of the tutorial.
+Now, everything is set up to continue with the rest of the tutorial.
 
 .. comment setup globel computor or move computer between ADAQ projects : 
 
@@ -147,7 +147,7 @@ Install the computer with:
 ADAQ workflows
 =========
 
-Now we are ready to use the ADAQ workflows, for details see :doc:`workflow`.
+Now we are ready to use the ADAQ workflows; for details see :doc:`workflow`.
 Run the ADAQ commands in the ADAQ project.
 
 .. note::
@@ -159,12 +159,12 @@ Run the ADAQ commands in the ADAQ project.
 Relax unit cell
 ---------------
 
-First step is relax the unit cell using the ADAQ workflow.
+The first step is to relax the unit cell using the ADAQ workflow.
 This workflow will store data in the ``unitcell`` folder.
-If something went wrong, empty the unitcell folder to reset.
+If something goes wrong, empty the unitcell folder to reset.
 
 This step will also make you more familiar with the *httk*.
-To make the *httk* task that relaxes the unit cell use the following command:
+To make the *httk* task that relaxes the unit cell, use the following command:
 
 .. code-block:: console
 
@@ -177,20 +177,20 @@ To send this task to the supercomputer, run:
 
    $ adaq-workflow-relax-unitcell send ht_tetralith
 
-Optional, you can verify that the task is at the supercomputer (``/path/to/httk/Runs/unitcell/ht.waitstart/3/4H-SiC/unitcell``).
+Optional: you can verify that the task is at the supercomputer (``/path/to/httk/Runs/unitcell/ht.waitstart/3/4H-SiC/unitcell``).
 To start the job, run:
+
+.. note::
+
+   When setting up the computer, we set the wall time to maximum which is relevant for the long screening workflow.
+   However, the relax unit cell workflow is much faster.
+   To avoid waiting long wait time in the queue, in``ht.project/computer/ht_tetralith/config`` edit to SLURM_TIMEOUT="01:00:00"
 
 .. code-block:: console
 
    $ adaq-workflow-relax-unitcell run ht_tetralith
    
 This will start a slurm job at the supercomputer.
-
-.. note::
-
-   When setting up the computer, we set the wall time to maximum which is relevant for the long screening workflow.
-   However, the relax unit cell workflow is much faster.
-   To avoid waiting to long in the queue, run: ``scontrol update jobid <jobid> timelimit=01:00:00`
 
 Once the slurm job (also referred to as taskmanager) has finished the calculations at the supercomputer.
 To receive the finished task, run:
@@ -199,9 +199,8 @@ To receive the finished task, run:
 
    $ adaq-workflow-relax-unitcell receive ht_tetralith
    
-If everything worked correctly, you should noe have a finished task (``ht.task.ht_tetralith--unitcell.4H-SiC_pbe.start.0.unclaimed.3.finished``) in the ``unitcell`` folder.
-The ADAQ workflow to relax the unit cell is now finished and we can proceed to generate the defects.
-If something went wrong, empty the unitcell folder to reset.
+If everything worked correctly, you should now have a finished task (``ht.task.ht_tetralith--unitcell.4H-SiC_pbe.start.0.unclaimed.3.finished``) in the ``unitcell`` folder.
+The ADAQ workflow to relax the unit cell is now finished, and we can proceed to generate the defects.
 
 .. _defects:
 
@@ -212,8 +211,8 @@ The defect generation is done locally in the ADAQ folder.
 This step will store data in the ``defect`` folder.
 If something goes wrong, empty this folder to reset.
 
-There are a number of parameters one need to set up before starting the defect generation.
-These are located in the ``parameter.py`` file, for details see :doc:`commands`.
+There are a few parameters one needs to set up before starting the defect generation.
+These are located in the ``parameter.py`` file; for details see :doc:`commands`.
 The default content looks like this:
 
 .. code-block:: console
@@ -265,7 +264,7 @@ The rest, we leave as default. Run:
 
    $ adaq-generate-defects
 
-This will take some time to generate first the interstital positions then all single defects.
+This will take some time to generate the interstitial positions first then all single defects.
 The results are stored in the ``generated.sqlite`` database in the ``defects`` folder.
 
 .. _node:
@@ -273,7 +272,7 @@ The results are stored in the ``generated.sqlite`` database in the ``defects`` f
 Node scaling
 ---------------
 
-After we have generated the defect, we need to optimze the number of nodes to run the defect calucations with.
+After we have generated the defect, we need to optimize the number of nodes to run the defect calculations with.
 This is done with the node scaling workflow.
 This step will store the number of nodes (``nodes_ht_tetralith.txt``) and the ``NBANDS`` tag (``nodes_ht_tetralith_nbands.txt``) in the ``ht.project/adaq/`` folder that are used for all defect calculations.
 If something goes wrong, remove these files to reset.
@@ -284,7 +283,7 @@ To test 10 different nodes, use the following command:
 
    $ adaq-workflow-node_scaling run ht_tetralith 10
 
-This command will set up and send the tasks to the supercomputer and also start a taskmanager for each number of nodes.
+This command will set up and send the tasks to the supercomputer and start a taskmanager for each number of nodes.
 The tasks are stored in the ``tuning`` folder.
 One can monitor the status of the runs with the following command:
 
@@ -292,7 +291,7 @@ One can monitor the status of the runs with the following command:
 
    $ adaq-workflow-node_scaling status ht_tetralith
 
-Once everything is fininshed, collect the results with the following command:
+Once everything is finished, collect the results with the following command:
 
 .. code-block:: console
 
@@ -304,7 +303,7 @@ To plot the scaling, run the following command:
 
    $ adaq-workflow-node_scaling result ht_tetralith
 
-This will produce following output and plot:
+This will produce the following output and plot:
 
 .. code-block:: console
 
@@ -317,13 +316,13 @@ This will produce following output and plot:
 
 .. image:: node_scaling.pdf
 
-In the upper plot, one sees number of corehours per number of ``Cores [Nodes]``.
+In the upper plot, one sees the number of corehours per number of ``Cores [Nodes]``.
 Here, the data matches the ideal scaling up to 5 nodes.
-Remember this number, once you close the figure, you will enter this value as seen in the code below.
+Remember this number: once you close the figure, you will enter this value as seen in the code below.
 There is a big dip for 6, and the higher nodes deviate from the ideal scaling.
 In the lower plot is the ``NBANDS`` tag per number of ``Cores [Nodes]``.
-Once the number of nodes are selected, the rounded NBANDS will be stored and used for all defect calulcation.
-This in order to make sure that the NBANDS are equally distubted over the cores.
+Once the number of nodes is selected, the rounded NBANDS will be stored and used for all defect calculation.
+This ensures that the number of bands are equally distributed over the cores.
 
 .. code-block:: console
 
@@ -331,18 +330,18 @@ This in order to make sure that the NBANDS are equally distubted over the cores.
    NBANDS 1760 written to file
    SLURM_NODES written to file
 
-Now the number of nodes are selected for all defect run.
+Now, the number of nodes is selected for all defect runs.
 
 .. _host:
 
 Host supercell
 ---------------
 
-The next step is calculated the required properties of the host supercell.
+The next step is to calculate the required properties of the host supercell.
 This workflow will store data in the ``host`` folder.
-If something went wrong, empty this folder to reset.
+If something goes wrong, empty this folder to reset.
 
-This workflow and commands are similar to the unit cell and works the same way.
+This workflow and commands work similarly to the unit cell workflow.
 Run the following commands:
 
 .. code-block:: console
@@ -357,22 +356,27 @@ Run the following commands:
 Screen
 ---------------
 
-Now, we can get to main part of ADAQ, calculating the single point defects.
+Now, we can get to the main part of ADAQ, calculating the single point defects.
 This workflow will store data in the ``screen`` folder.
-If something went wrong, empty this folder to reset.
+If something goes wrong, empty this folder to reset.
 
-This workflow and commands are similar to the unit cell but some extra steps that we will go through here.
-Run the following commands:
+This workflow and commands work similarly to the unit cell and host workflow, but we will go through some extra steps here.
+Run the following command:
 
 .. code-block:: console
 
    $ adaq-workflow-screen-defects setup ht_tetralith
 
-This will set up multi tasks in the ``screen`` folder.
+This will set up multiple tasks in the ``screen`` folder.
 It will also produce a ``lookup`` table that reduces the defect id to a int.
-This is done to reduce the total length of the path, cause some versions of VASP can only handle an absoulate path shorter that 240 characters.
+This is done to reduce the total length of the path because some versions of VASP can only handle an absolute path shorter than 240 characters.
 The command ``adaq-lookup screen display`` shows the renaming.
-After this step calculate the tasks like before with:
+After this step, calculate the tasks like before with the following:
+
+.. note::
+
+   If you editted ``ht.project/computer/ht_tetralith/config`` in the relax unit cell workflow.
+   Rememeber to edit back SLURM_TIMEOUT="168:00:00"
 
 .. code-block:: console
 
@@ -380,14 +384,14 @@ After this step calculate the tasks like before with:
    $ adaq-workflow-screen-defects run ht_tetralith
    $ adaq-workflow-screen-defects receive ht_tetralith
 
-After everything has finished, run the following command to rename all defects to their orignal id: 
+After everything has finished, run the following command to rename all defects to their original id: 
 
 .. code-block:: console
 
-   $ adaq-lookup screen renamne
+   $ adaq-lookup screen rename
 
-Now you have screen the single defects in 4H-SiC.
-In order to view the results, we shall now make a database.
+Now you have screened the single defects in 4H-SiC.
+To view the results, we shall now make a database.
 
 .. _database:
 
@@ -403,8 +407,8 @@ The following command will create the database (and remove older versions):
 
    $ adaq-rebuild-database light
 
-The command light, skip storing the relaxed structures to speed up generation of the database.
-The first time this command runs, it will generate manifest for all tasks.
+The argument ``light``, skip storing the relaxed structures to speed up the generation of the database.
+The first time this command runs, it will generate a manifest for all tasks.
 This will take some time.
 
 After the database has finished, we can ...
