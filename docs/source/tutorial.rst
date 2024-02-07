@@ -303,7 +303,7 @@ To plot the scaling, run the following command:
 
    $ adaq-workflow-node_scaling result ht_tetralith
 
-This will produce the following output and plot:
+This will produce the following output:
 
 .. code-block:: console
 
@@ -313,6 +313,8 @@ This will produce the following output and plot:
    Bands per cores:  [54.03125, 27.03125, 18.03125, 13.53125, 10.8125, 9.03125, 7.71875, 6.78125, 6.03125, 5.40625]
    Rounded NBANDS:  [1728, 1728, 1728, 1792, 1760, 1728, 1792, 1792, 1728, 1600]
    Close figure after deciding the number of nodes.
+
+And plot the results:
 
 .. image:: node_scaling.pdf
    :width: 600
