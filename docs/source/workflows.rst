@@ -28,7 +28,8 @@ The parameters for run.py are processed in ``ht.instantiate.py``.
    Read this documentation carefully to understand what parameter each workflow can be modified with.
    For more information on how to calculate other properties, see the 'make your own workflow' section below.
 
-There are also additional workflows, to add...
+.. todo::
+   There are also additional workflows, to add...
 
 .. _Chemical potential:
 Chemical Potential
@@ -110,5 +111,4 @@ Currently, only the PBE functional is implemented.
 Make your own workflow
 =============
 
-.. todo::
-   add later
+add later
