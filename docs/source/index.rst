@@ -17,7 +17,8 @@ ADAQ: Automatic Defect Analysis and Qualification
 
    commands
    workflows
-   database
+
+.. comment add back database under Details
 
 .. figure:: ADAQ_logo_header.png
   :scale: 25%
