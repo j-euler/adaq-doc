@@ -16,7 +16,7 @@ ADAQ: Automatic Defect Analysis and Qualification
    :caption: Details
 
    commands
-   workflow
+   workflows
    database
 
 .. figure:: ADAQ_logo_header.png

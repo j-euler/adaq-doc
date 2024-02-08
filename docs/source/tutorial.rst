@@ -68,6 +68,20 @@ Once it looks ok, you install *httk* on the supercomputer with the following com
 
    $ httk-computer-install <computer name>
 
+If your require to load any modules at the supercomputer, you add them in the ``ht.project/computers/name/start-taskmgr`` file.
+For example, add the python module, like this:
+
+.. code-block:: console
+
+   module load Anaconda/2023.09-0-hpc1
+   conda activate adaq2
+
+after ``source "\$HTTK_DIR/setup.shell"``.
+For more detials, see :doc:`overview`.
+
+.. todo:: 
+   export I_MPI_ADJUST_REDUCE=3
+
 Now, everything is set up to continue with the rest of the tutorial.
 
 .. comment setup globel computor or move computer between ADAQ projects : 
@@ -215,7 +229,7 @@ There are a few parameters one needs to set up before starting the defect genera
 These are located in the ``parameter.py`` file; for details see :doc:`commands`.
 The default content looks like this:
 
-.. code-block:: console
+.. code-block:: python
 
    '''
    Parameters used in defect generation
@@ -318,6 +332,7 @@ And produce the this plot:
 
 .. image:: node_scaling.png
    :width: 600
+   :align: center
 
 In the upper plot, one sees the number of corehours per number of ``Cores [Nodes]``.
 Here, the data matches the ideal scaling up to 5 nodes.
