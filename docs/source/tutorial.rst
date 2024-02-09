@@ -94,10 +94,10 @@ To install tetralith, run ``httk-computer-setup`` and fill in the following prom
 .. code-block:: console
 
    ==== httk-setup-computer
-   Current project: 6H-SiC (/dedur01/data/joeda01/adaq_data/6H-SiC)
+   Current project: 4H-SiC (/dedur01/data/joeda01/adaq_data/4H-SiC)
    Do you want to setup a project computer (if no, setup a global one) [Y/N]
    Y   
-   ==== Setting up computer in /dedur01/data/joeda01/adaq_data/6H-SiC/ht.project/computers//
+   ==== Setting up computer in /dedur01/data/joeda01/adaq_data/4H-SiC/ht.project/computers//
 
    The following templates exist:
    local  local-slurm  ssh-slurm
@@ -129,7 +129,7 @@ To install tetralith, run ``httk-computer-setup`` and fill in the following prom
    Taskmanager timeout max time per task in seconds: [3600]
    604800
 
-   New computer configuration added in: /dedur01/data/joeda01/adaq_data/6H-SiC/ht.project/computers///ht_tetralith
+   New computer configuration added in: /dedur01/data/joeda01/adaq_data/4H-SiC/ht.project/computers///ht_tetralith
    Reminder: if you regret any of your answers
    just run httk-computer-reconfigure ht_tetralith
 
