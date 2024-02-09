@@ -69,6 +69,7 @@ Host Supercell
 Command: ``adaq-workflow-calculate-host``, see :doc:`commands`.
 
 This workflow calculates the total energy for the screening and full workflow.
+It also converges the number of k-points needed for the full workflow.
 Currently, only the PBE functional is implemented.
 
 .. _screen:
