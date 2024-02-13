@@ -71,13 +71,21 @@ A suggestion is to make a virtualenv or conda with python 2.7 and tess:
 
 .. code-block:: console
 
-   $ conda create -n adaq python=2.7 tess
+   $ conda create -n adaq python=2.7
 
 activate this environment with:
 
 .. code-block:: console
 
    $ conda activate adaq
+
+and install `tess`_ with:
+
+.. code-block:: console
+
+   (adaq) $ pip install --user tess
+
+.. _tess: https://github.com/wackywendell/tess
 
 **Test installation**
 
@@ -117,7 +125,7 @@ At the supercomputer, you require `VASP`_ and a python installation with numpy a
 Linköping University specifics
 ------------------------------
 
-Recommended to install httk and ADAQ at dedur01.
+Recommended to install httk and ADAQ at `dedur01`.
 At dedur01, the required files are located here:
 
 * istropy (/dedur01/data/shared/httk_libs/isotropy)
@@ -139,3 +147,6 @@ When using tetralith or sigma, install a conda environment:
 .. code-block:: console
 
    $ conda create -n adaq2 python=2.7 numpy scipy
+
+
+.. _dedur01: https://gitlab.liu.se/theophys/guide/-/wikis/Computing/dedur01
