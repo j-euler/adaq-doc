@@ -133,7 +133,11 @@ At dedur01, the required files are located here:
 
 .. note::
    
-   At dedur, you may need to install gcc compiler. use the following command: ``conda install compilers`
+   At dedur, you may need to install gcc compiler. use the following command: ``conda install compilers``
+   
+.. todo::
+
+   ask abhijith to commit his changes to httk/devel
 
 It is also recommended to add configure ssh connection sharing at dedur.
 Add the following code to ``.ssh/config``:
