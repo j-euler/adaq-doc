@@ -131,6 +131,10 @@ At dedur01, the required files are located here:
 * istropy (/dedur01/data/shared/httk_libs/isotropy)
 * jmol (/dedur01/data/shared/httk_libs/jmol/jmol-14.4.0_2015.10.22b/jmol.sh)
 
+.. note::
+   
+   At dedur, you may need to install gcc compiler. use the following command: ``conda install compilers`
+
 It is also recommended to add configure ssh connection sharing at dedur.
 Add the following code to ``.ssh/config``:
 
