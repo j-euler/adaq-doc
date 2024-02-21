@@ -33,11 +33,9 @@ Write the path to the 4H-SiC in ``path/to/ADAQ/test/4H-SiC.vasp``
 
 You will also prompted to provide the dielectric constant (9.6) and refractive_index (2.6473) for 4H-SiC.
 
+You will also prompted to provide meta data about the project, like title (tutorial) and contributors (your name).
+
 This finished the adaq project setup.
-
-.. todo::
-
-   There will also be some metadata to add, such as project, and collaborators etc.
 
 The command will also set up a *httk* project.
 You will be prompted to set up a public key that identifies you as the owner, which is recommended.

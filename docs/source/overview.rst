@@ -56,12 +56,17 @@ It does not need to be relaxed, there are ADAQ workflows to do that.
 
 One also needs to provide additional parameters that are not calculated.
 These are:
-* Dielectric constant
+* dielectric constant
 * refractive index
+
+As well as meta data about the project.
+These are:
+* title
+* contributors
 
 .. todo::
 
-   There will also be some metadata to add, such as project, and collaborators etc.
+   materials project setup
 
 The command will also set up a httk project.
 You will be prompted to set up a public key that identifies you as the owner, which is recommended.
@@ -76,7 +81,8 @@ You will now have a folder titled ``<name>`` with subfolders for the different w
 It will also contain:
 
 * ``<name>``.vasp that is the POSCAR of the unit cell.
-* ``<name>``.data that contain the dielectric constant and refractive index.
+* ``<name>``.data that contains the dielectric constant and refractive index.
+* project.meta that contains meta data about the project.
 * parameters.py that have the settings for the defect generation.
 * ht.project that has the settings for the defect generation.
 
