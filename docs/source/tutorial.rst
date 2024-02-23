@@ -174,6 +174,7 @@ Relax unit cell
 The first step is to relax the unit cell using the ADAQ workflow.
 This workflow will store data in the ``unitcell`` folder.
 If something goes wrong, empty the unitcell folder to reset.
+You may also need to remove files at the supercomputer, see :doc:`troubleshooting` for more details.
 
 This step will also make you more familiar with the *httk*.
 To make the *httk* task that relaxes the unit cell, use the following command:
@@ -288,6 +289,7 @@ After we have generated the defect, we need to optimize the number of nodes to r
 This is done with the node scaling workflow.
 This step will store the number of nodes (``nodes_ht_tetralith.txt``) and the ``NBANDS`` tag (``nodes_ht_tetralith_nbands.txt``) in the ``ht.project/adaq/`` folder that are used for all defect calculations.
 If something goes wrong, remove these files to reset.
+You may also need to remove files at the supercomputer, see :doc:`troubleshooting` for more details.
 
 To test 10 different nodes, use the following command:
 
@@ -356,6 +358,7 @@ Host supercell
 The next step is to calculate the required properties of the host supercell.
 This workflow will store data in the ``host`` folder.
 If something goes wrong, empty this folder to reset.
+You may also need to remove files at the supercomputer, see :doc:`troubleshooting` for more details.
 
 This workflow and commands work similarly to the unit cell workflow.
 Run the following commands:
@@ -375,6 +378,7 @@ Screen
 Now, we can get to the main part of ADAQ, calculating the single point defects.
 This workflow will store data in the ``screen`` folder.
 If something goes wrong, empty this folder to reset.
+You may also need to remove files at the supercomputer, see :doc:`troubleshooting` for more details.
 
 This workflow and commands work similarly to the unit cell and host workflow, but we will go through some extra steps here.
 Run the following command:
