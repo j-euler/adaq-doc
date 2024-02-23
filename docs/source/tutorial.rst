@@ -454,7 +454,7 @@ To plot the eigenvalues for this charge and spin state, run:
 
 which produces an eigenvalue plot like this:
 
-.. image:: eigenavlue.png
+.. image:: eigenvalue.png
    :width: 600
    :align: center
 
