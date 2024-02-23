@@ -431,7 +431,34 @@ The argument ``light``, skip storing the relaxed structures to speed up the gene
 The first time this command runs, it will generate a manifest for all tasks.
 This will take some time.
 
-After the database has finished, we can ...
+After the database has finished, we can look more closely at specific defects.
+For example, the silicon vacancy that have the defect id: ``-6977328512552031545``.
+To plot the formation energy for this defect, run:
+
+.. code-block:: console
+
+   $ adaq-database-plot-formation-energy -6977328512552031545
+
+which produces an formation energy plot like this:
+
+.. image:: form.png
+   :width: 600
+   :align: center
+
+Here one sees that the negative charge (-1) state have spin 1.5.
+To plot the eigenvalues for this charge and spin state, run:
+
+.. code-block:: console
+
+   $ adaq-database-plot-eigenvalues -6977328512552031545 screen -1 1.5
+
+which produces an eigenvalue plot like this:
+
+.. image:: eigenavlue.png
+   :width: 600
+   :align: center
+
+One can also add more sofisicated search based on various properties...
 
 .. todo::
 
