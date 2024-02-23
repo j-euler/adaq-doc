@@ -18,6 +18,9 @@ Install the `devel`_ branch by following the instructions here:
 
 .. _devel: https://github.com/httk/httk/tree/devel
 
+.. todo::
+   is this the right version, I need to upload my httk version and edits.
+
 .. code-block:: console
 
    $ git clone -b devel https://github.com/httk/httk.git
@@ -83,7 +86,7 @@ and install `tess`_ with:
 
 .. code-block:: console
 
-   (adaq) $ pip install --user tess
+   (adaq) $ pip install tess
 
 .. _tess: https://github.com/wackywendell/tess
 
