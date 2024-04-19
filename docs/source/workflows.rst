@@ -97,6 +97,19 @@ To reduce the number of calculations, the screen workflow skips interstitial-int
    add references to adaq paper?
 
 
+.. _rerun:
+Make a workflow to calculate additional properties
+-------------
+It is possible to make a separate workflow that builds on the results from the screen workflow.
+The framework to rerun screened defects and calculate additional properties is located in ``workflows/rerun_screen_workflow``.
+Copy this folder and make your workflow.
+Change all instances of a rerun to an appropriate names for your workflow.
+
+Do the following steps:
+* Update ``run.py`` with additional parameters and which defects to calculate.
+* Update the ``template`` folder, especially the ``ht_steps`` file, to calculate the properties needed for a ground and/or excited state.
+* Update ``store_to_database.py``, possible add new classes in adaq/src/db/classes.py
+
 .. _full:
 Full Charaterization
 =============
@@ -107,6 +120,8 @@ This workflow calculates all excitations for a defect with higher k-point grid.
 It runs additional charge states, double negative and positive.
 
 Currently, only the PBE functional is implemented.
+
+
 
 .. _own workflow:
 Make your own workflow
