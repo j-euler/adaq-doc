@@ -104,8 +104,10 @@ It is possible to make a separate workflow that builds on the results from the s
 The framework to rerun screened defects and calculate additional properties is located in ``workflows/rerun_screen_workflow``.
 Copy this folder and make your workflow.
 Change all instances of a rerun to an appropriate names for your workflow.
+There is also a template adaq-command: ``adaq-workflow-rerun`` connected to this template, edit also the rerun names here.
+For more info about commands, see :doc:`commands`.
 
-Do the following steps:
+Do the following steps for the template:
 
 * Update ``run.py`` with additional parameters and which defects to calculate.
 * Update the ``template`` folder, especially the ``ht_steps`` file, to calculate the properties needed for a ground and/or excited state.
@@ -121,8 +123,6 @@ This workflow calculates all excitations for a defect with higher k-point grid.
 It runs additional charge states, double negative and positive.
 
 Currently, only the PBE functional is implemented.
-
-
 
 .. _own workflow:
 Make your own workflow
