@@ -106,6 +106,7 @@ Copy this folder and make your workflow.
 Change all instances of a rerun to an appropriate names for your workflow.
 
 Do the following steps:
+
 * Update ``run.py`` with additional parameters and which defects to calculate.
 * Update the ``template`` folder, especially the ``ht_steps`` file, to calculate the properties needed for a ground and/or excited state.
 * Update ``store_to_database.py``, possible add new classes in adaq/src/db/classes.py
