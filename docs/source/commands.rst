@@ -178,7 +178,7 @@ It removes any older versions and make a new if the command is run again.
    
 Arguments:
 
-#. select what to include in the database, either ``light`` (skips the relaxed defect structures) or ``full`` (default)
+#. select what to include in the database, either ``light`` (skips the relaxed defect structures) or ``full`` (default). The longest part is storing relaxed structures. Using the ``struct`` argument, it is possible to store these separately in a database called ``structures.sqlite``. When this database is present, the full database can be built faster.
 
 It is also possible to extract data from the the database.
 To get a formation energy plot, run the following command:
