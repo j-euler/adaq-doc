@@ -413,6 +413,10 @@ After everything has finished, run the following command to rename all defects t
 Now you have screened the single defects in 4H-SiC.
 To view the results, we shall now make a database.
 
+.. note::
+
+   It is also possible to check if there are any faulty task that slipped through. Use ``adaq-workflow-screen-defects check ht_tetralith``.
+
 .. _database:
 
 Build database

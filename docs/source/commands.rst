@@ -123,7 +123,7 @@ Interface with the screening workflow:
    
 Arguments:
 
-#. ``setup, send, run, receive``
+#. ``setup, send, run, receive, check``
 #. select which computer to run
 #. number of taskmananger to run (optional)
 
