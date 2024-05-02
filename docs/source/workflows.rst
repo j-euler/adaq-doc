@@ -100,6 +100,8 @@ To reduce the number of calculations, the screen workflow skips interstitial-int
 .. _rerun:
 Make a workflow to calculate additional properties
 -------------
+Command: ``adaq-set-up-rerun``, see :doc:`commands`.
+
 It is possible to make a separate workflow that builds on the results from the screen workflow.
 The framework to rerun screened defects and calculate additional properties is located in ``workflows/rerun_screen_workflow``.
 Copy this folder and make your workflow.

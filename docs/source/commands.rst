@@ -29,6 +29,12 @@ If you are uncertin of your progress, run the following command:
 
    $ adaq-next-step
 
+If you want to calculate additional properties based on the screen results, you can use the following command to create a new ADAQ project for reruns:
+
+.. code-block:: console
+
+   $ adaq-set-up-rerun <path/to/old_data>
+
 .. _defect:
 
 Defect Generation
